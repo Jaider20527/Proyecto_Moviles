@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "828474322642",
+    "project_id": "photoia-79f91",
+    "storage_bucket": "photoia-79f91.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828474322642:android:6f9be3f2399b6a2b2d870b",
+        "android_client_info": {
+          "package_name": "com.example.photo_ia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828474322642-rj78fqbrhq40vatloklqo7m1jsmnnkd1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.photo_ia",
+            "certificate_hash": "0a4142625701b952d3844b2f7ff7636451bf6536"
+          }
+        },
+        {
+          "client_id": "828474322642-la208ou4s9td3a053v8qm7maesgbn2re.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1jwWoBjTQclD854oHC9EQy2JRH4xI8Qo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828474322642-la208ou4s9td3a053v8qm7maesgbn2re.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos necesarios -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <!-- Permisos de ubicación en segundo plano (solo si es necesario) -->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Permisos para cámara y almacenamiento -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+
+    <!-- Permiso para leer imágenes en Android 13 (API 33) y superior -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" android:required="false"/>
+
+    <!-- Permiso para acceder a la cámara -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.Photo_IA"
+        tools:targetApi="31">
+
+        <!-- Actividad de carga -->
+        <activity
+            android:name=".LoadActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividad de inicio de sesión -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="Iniciar Sesión"
+            android:exported="true" />
+
+        <!-- Actividad principal -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:exported="true" />
+        <!-- Actividad principal -->
+        <activity
+            android:name=".AnimalRecognitionActivity"
+            android:label="@string/app_name"
+            android:exported="true" />
+
+        <!-- FileProvider para el acceso a archivos -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.photo_ia.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyBDN5fRu6-lg80YVhzftO9yONcdf5y11kA" />
+
+</manifest>
